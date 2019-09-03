@@ -20,6 +20,8 @@ In the Job Template editor on the Tower UI check the box in the corner to enable
 # Examples and Command line syntax
 
 # <h6> An example of and adhoc job
+ 
+ # <h5><i> This wil prompt for the password
 
 ansible_gather_facts.ps1 -twr_user toweruser -twr_server towerserver 
 
