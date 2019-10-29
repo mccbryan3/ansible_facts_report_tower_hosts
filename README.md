@@ -17,19 +17,24 @@ In the Job Template editor on the Tower UI check the box in the corner to enable
 -twr_pass
 •	Tower user password as securestring
 
-# Command line syntax
+# Examples and Command line syntax
 
-# An example of and adhoc job
+# <h6> An example of and adhoc job
+ 
+ # <h5><i> This wil prompt for the password </i>
 
 ansible_gather_facts.ps1 -twr_user toweruser -twr_server towerserver 
 
-# An example of calling the script with a plain text password
+# <h6> An example of calling the script with a plain text password
 
 ansible_gather_facts.ps1 -twr_user toweruser -twr_server towerserver -twr_pass $( 'password' | ConvertTo-SecureString -AsPlainText -Force)
 
-# An example of grid view output
+# <h6> An example of grid view output
 
 ansible_gather_facts.ps1 -twr_user toweruser -twr_server towerserver  | Out-GridView -Title “Ansible Facts”
+
+# Conclusion
+Now that you have control of the fact data from your Tower hosts you can now use it to populate CMDB, report on the facts or just show your friends how cool you are.
 
 
 DISCLAIMER: Try not to type passwords in the shell
