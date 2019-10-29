@@ -33,7 +33,6 @@ return true;
 [System.Net.ServicePointManager]::CertificatePolicy = New-Object TrustAllCertsPolicy
 $EncodedAuthorization = [System.Text.Encoding]::UTF8.GetBytes($twr_user + ":" + $p)
     $EncodedPassword = [System.Convert]::ToBase64String($EncodedAuthorization)
-
     
 $headers = @{
     "Authorization"="Basic $($EncodedPassword)"
